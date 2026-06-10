@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Samochod" load_steps=3 format=3 uid="uid://dn0bnsr7qul05"]
+
+[ext_resource type="Script" uid="uid://cmatil700xq4j" path="res://car/Samochod.gd" id="1_k05qn"]
+[ext_resource type="Texture2D" uid="uid://bm4ek4he5nnni" path="res://assets/kenney_racing-pack/PNG/Cars/car_black_3.png" id="2_ek2nc"]
+
+[resource]
+script = ExtResource("1_k05qn")
+nazwa = "Czarny"
+tekstura = ExtResource("2_ek2nc")
+moc = 1100
+przyczepnosc_drift = 0.03
+tarcie = -0.7
+metadata/_custom_type_script = "uid://cmatil700xq4j"

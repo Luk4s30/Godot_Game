@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6dmfkv57huih"]
+
+[node name="music_player" type="Node2D"]
+
+[node name="musicplayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

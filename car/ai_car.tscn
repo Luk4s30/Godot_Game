@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=3 uid="uid://c344vy5qde7ob"]
+
+[ext_resource type="Script" uid="uid://qpydw6qi7ect" path="res://car/ai_car.gd" id="1_l0ycv"]
+[ext_resource type="Texture2D" uid="uid://bk1xpvamivbhk" path="res://assets/kenney_racing-pack/PNG/Cars/car_red_5.png" id="2_h7sim"]
+[ext_resource type="AudioStream" uid="uid://c6hts5uy8gcdq" path="res://assets/sound/Engine.wav" id="5_kbt3b"]
+[ext_resource type="AudioStream" uid="uid://bjetmsiuafcwx" path="res://assets/sound/tires_squal_loop.wav" id="6_227kd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k61xc"]
+radius = 33.0
+height = 120.0
+
+[sub_resource type="Gradient" id="Gradient_06lh1"]
+offsets = PackedFloat32Array(0, 0.99333334, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_td361"]
+gradient = SubResource("Gradient_06lh1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.10514019, 0.86214954)
+
+[sub_resource type="Gradient" id="Gradient_td361"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_72krn"]
+gradient = SubResource("Gradient_td361")
+
+[sub_resource type="Curve" id="Curve_06lh1"]
+_data = [Vector2(0, 0.17440367), 0.0, 1.5774974, 0, 0, Vector2(0.7857143, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.9539007), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_lpol0"]
+curve = SubResource("Curve_06lh1")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u5era"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 0.7
+scale_max = 1.1
+scale_curve = SubResource("CurveTexture_lpol0")
+color_ramp = SubResource("GradientTexture1D_72krn")
+
+[node name="ai_car" type="CharacterBody2D" groups=["car"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_l0ycv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+texture = ExtResource("2_h7sim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+rotation = 1.572415
+shape = SubResource("CapsuleShape2D_k61xc")
+
+[node name="dymP" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(-57, 21)
+emitting = false
+amount = 75
+texture = SubResource("GradientTexture2D_td361")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_u5era")
+
+[node name="dymL" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+show_behind_parent = true
+position = Vector2(-57, -20)
+emitting = false
+amount = 75
+texture = SubResource("GradientTexture2D_td361")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_u5era")
+
+[node name="SilnikSFX" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+stream = ExtResource("5_kbt3b")
+autoplay = true
+bus = &"sfx"
+
+[node name="PiskSFX" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+process_mode = 3
+stream = ExtResource("6_227kd")
+volume_db = -5.0
+bus = &"sfx"
+
+[node name="sensory" type="Node2D" parent="."]
+
+[node name="RayL2" type="RayCast2D" parent="sensory"]
+rotation = -1.0471976
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="RayL1" type="RayCast2D" parent="sensory"]
+rotation = -0.5235988
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="RayFront" type="RayCast2D" parent="sensory"]
+target_position = Vector2(250, 0)
+collision_mask = 2
+
+[node name="RayR1" type="RayCast2D" parent="sensory"]
+rotation = 0.5235988
+target_position = Vector2(200, 0)
+collision_mask = 2
+
+[node name="RayR2" type="RayCast2D" parent="sensory"]
+rotation = 1.0471976
+target_position = Vector2(200, 0)
+collision_mask = 2

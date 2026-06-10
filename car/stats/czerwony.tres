@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Samochod" load_steps=3 format=3 uid="uid://comwpfd00cmmd"]
+
+[ext_resource type="Script" uid="uid://cmatil700xq4j" path="res://car/Samochod.gd" id="1_eg5ne"]
+[ext_resource type="Texture2D" uid="uid://cvbtydc35bmf" path="res://assets/kenney_racing-pack/PNG/Cars/car_red_1.png" id="2_j3e1f"]
+
+[resource]
+script = ExtResource("1_eg5ne")
+nazwa = "Czerwony"
+tekstura = ExtResource("2_j3e1f")
+tarcie = -0.7
+metadata/_custom_type_script = "uid://cmatil700xq4j"

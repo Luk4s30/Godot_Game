@@ -1,0 +1,686 @@
+[gd_scene load_steps=31 format=3 uid="uid://ik5muxymov43"]
+
+[ext_resource type="Script" uid="uid://bvmv4irms2ks3" path="res://interfejs/menu/Interfejs.gd" id="1_5dwg6"]
+[ext_resource type="FontFile" uid="uid://doq3t4qeffiip" path="res://assets/font/Fredoka-Bold.ttf" id="2_tmiqs"]
+[ext_resource type="PackedScene" uid="uid://c2fpu3s4tfbj2" path="res://interfejs/menu/przycisk.tscn" id="3_kvv6v"]
+[ext_resource type="FontFile" uid="uid://b47akt0ehbi3u" path="res://assets/font/Fredoka-Medium.ttf" id="4_6lpbf"]
+[ext_resource type="FontFile" uid="uid://yqpqwf2edcs7" path="res://assets/font/Fredoka-Regular.ttf" id="5_8r57l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tmiqs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fafil"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+font_color = Color(1, 0.75686276, 0.02745098, 1)
+outline_size = 150
+outline_color = Color(1, 0.75686276, 0.02745098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1tw5"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+outline_size = 125
+outline_color = Color(0, 0.6901961, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6lpbf"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+outline_size = 100
+outline_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8r57l"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+font_color = Color(1, 0.75686276, 0.02745098, 1)
+outline_size = 75
+outline_color = Color(1, 0.75686276, 0.02745098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_soae4"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+outline_size = 50
+outline_color = Color(0, 0.6901961, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_20s3x"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+outline_size = 25
+outline_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kvv6v"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+font_color = Color(1, 0.75686276, 0.02745098, 1)
+outline_color = Color(1, 0.75686276, 0.02745098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kh0u6"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+font_color = Color(0, 0.6901961, 1, 1)
+outline_size = 50
+outline_color = Color(0, 0.6901961, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qm18o"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+font_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+outline_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_io1hr"]
+font = ExtResource("2_tmiqs")
+font_size = 64
+
+[sub_resource type="Animation" id="Animation_v1tw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tytuł1/Tytuł2:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [125]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tytuł1/Tytuł2/Tytuł3:label_settings:outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [100]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4:label_settings:outline_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [75]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5:label_settings:outline_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [50]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6:label_settings:outline_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [25]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7:label_settings:outline_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8:label_settings:outline_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [50]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8/Tytuł9:label_settings:outline_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_kvv6v"]
+resource_name = "odychanie"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tytuł1/Tytuł2:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [125, 150, 150]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Tytuł1/Tytuł2/Tytuł3:label_settings:outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [100, 150, 150]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4:label_settings:outline_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [75, 150]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5:label_settings:outline_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [50, 125]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6:label_settings:outline_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [25, 100]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7:label_settings:outline_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 75]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8:label_settings:outline_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 0, 50]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8/Tytuł9:label_settings:outline_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 0, 25]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6lpbf"]
+_data = {
+&"RESET": SubResource("Animation_v1tw5"),
+&"odychanie": SubResource("Animation_kvv6v")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kvv6v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6f60n"]
+font = ExtResource("2_tmiqs")
+font_size = 52
+
+[sub_resource type="LabelSettings" id="LabelSettings_v3jue"]
+font = ExtResource("4_6lpbf")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_m8hor"]
+font = ExtResource("5_8r57l")
+font_size = 30
+
+[sub_resource type="Gradient" id="Gradient_6lpbf"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.21031746, 0.38492063, 0.70238096)
+colors = PackedColorArray(0.9372549, 0.3254902, 0.3137255, 1, 0, 0.6901961, 1, 1, 0, 0.6901961, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8r57l"]
+gradient = SubResource("Gradient_6lpbf")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_weley"]
+content_margin_top = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6lpbf"]
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(1, 0.75686276, 0.02745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r57l"]
+content_margin_top = 3.0
+content_margin_bottom = 3.0
+bg_color = Color(1, 0.75686276, 0.02745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v1tw5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_au67h"]
+font = ExtResource("2_tmiqs")
+font_size = 52
+
+[node name="Interfejs" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5dwg6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -227.99998
+offset_top = 604.0
+offset_right = -228.0
+offset_bottom = 604.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.2234684
+color = Color(0.15686275, 0.13725491, 0.29803923, 1)
+
+[node name="MainMenu" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_tmiqs")
+
+[node name="Tytuł" type="MarginContainer" parent="MainMenu"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = 50
+
+[node name="Tytuł1" type="Label" parent="MainMenu/Tytuł"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_fafil")
+
+[node name="Tytuł2" type="Label" parent="MainMenu/Tytuł/Tytuł1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_v1tw5")
+
+[node name="Tytuł3" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_6lpbf")
+
+[node name="Tytuł4" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_8r57l")
+
+[node name="Tytuł5" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_soae4")
+
+[node name="Tytuł6" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_20s3x")
+
+[node name="Tytuł7" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_kvv6v")
+
+[node name="Tytuł8" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_kh0u6")
+
+[node name="Tytuł9" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_qm18o")
+
+[node name="Tytuł" type="Label" parent="MainMenu/Tytuł/Tytuł1/Tytuł2/Tytuł3/Tytuł4/Tytuł5/Tytuł6/Tytuł7/Tytuł8/Tytuł9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VROOM   VROOM"
+label_settings = SubResource("LabelSettings_io1hr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MainMenu/Tytuł"]
+libraries = {
+&"": SubResource("AnimationLibrary_6lpbf")
+}
+autoplay = "odychanie"
+
+[node name="Przyciski" type="MarginContainer" parent="MainMenu"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/Przyciski"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Przyciski/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="GRAJ" parent="MainMenu/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "GRAJ"
+
+[node name="USTAWIENIA" parent="MainMenu/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "USTAWIENIA"
+
+[node name="GARAZ" parent="MainMenu/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "GARAŻ"
+
+[node name="WYJDZ" parent="MainMenu/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "WYJDŹ"
+
+[node name="Control" type="Control" parent="MainMenu/Przyciski/HBoxContainer"]
+layout_mode = 2
+
+[node name="Ustawienia" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kvv6v")
+
+[node name="Ustawienia" type="MarginContainer" parent="Ustawienia"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Ustawienia/Ustawienia"]
+layout_mode = 2
+text = "USTAWIENIA"
+label_settings = SubResource("LabelSettings_6f60n")
+
+[node name="Przyciski" type="MarginContainer" parent="Ustawienia"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Ustawienia/Przyciski"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Ustawienia/Przyciski/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Muzyka" type="Label" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "MUZYKA:"
+label_settings = SubResource("LabelSettings_v3jue")
+
+[node name="sfx_l" type="Label" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Efekty dźwiękowe:"
+label_settings = SubResource("LabelSettings_m8hor")
+
+[node name="sfx_slider" type="HSlider" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_8r57l")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_8r57l")
+theme_override_styles/slider = SubResource("StyleBoxFlat_weley")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6lpbf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_8r57l")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="muzyka_l" type="Label" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Muzyka:"
+label_settings = SubResource("LabelSettings_m8hor")
+
+[node name="music_slider" type="HSlider" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_icons/grabber = SubResource("GradientTexture2D_8r57l")
+theme_override_icons/grabber_highlight = SubResource("GradientTexture2D_8r57l")
+theme_override_styles/slider = SubResource("StyleBoxFlat_weley")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_6lpbf")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_8r57l")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="Postęp" type="Label" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "POSTĘP:"
+label_settings = SubResource("LabelSettings_v3jue")
+
+[node name="RESET" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "RESETUJ ZAPIS GRY"
+
+[node name="POWROT" parent="Ustawienia/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "POWRÓT"
+
+[node name="Control" type="Control" parent="Ustawienia/Przyciski/HBoxContainer"]
+layout_mode = 2
+
+[node name="Mapy" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_v1tw5")
+
+[node name="Napis" type="MarginContainer" parent="Mapy"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Mapy/Napis"]
+layout_mode = 2
+text = "WYBÓR MAPY"
+label_settings = SubResource("LabelSettings_au67h")
+
+[node name="Przyciski" type="MarginContainer" parent="Mapy"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Mapy/Przyciski"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Mapy/Przyciski/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="Mapa1" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "TOR TRENINGOWY"
+
+[node name="Mapa2" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "LAS"
+
+[node name="Mapa3" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "PARK"
+
+[node name="Mapa1W" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "TOR TRENINGOWY WYŚCIG"
+
+[node name="Mapa2W" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "LAS WYŚCIG"
+
+[node name="Mapa3W" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "PARK WYŚCIG"
+
+[node name="POWROTM" parent="Mapy/Przyciski/HBoxContainer/VBoxContainer" instance=ExtResource("3_kvv6v")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "POWRÓT"
+
+[node name="Control" type="Control" parent="Mapy/Przyciski/HBoxContainer"]
+layout_mode = 2
+
+[connection signal="value_changed" from="Ustawienia/Przyciski/HBoxContainer/VBoxContainer/sfx_slider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="value_changed" from="Ustawienia/Przyciski/HBoxContainer/VBoxContainer/music_slider" to="." method="_on_MusicSlider_value_changed"]

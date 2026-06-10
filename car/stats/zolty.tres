@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Samochod" load_steps=3 format=3 uid="uid://bnvrs2rg6q125"]
+
+[ext_resource type="Script" uid="uid://cmatil700xq4j" path="res://car/Samochod.gd" id="1_yxaqo"]
+[ext_resource type="Texture2D" uid="uid://cljllbekgjolh" path="res://assets/kenney_racing-pack/PNG/Cars/car_yellow_4.png" id="2_wojma"]
+
+[resource]
+script = ExtResource("1_yxaqo")
+nazwa = "Zółty"
+tekstura = ExtResource("2_wojma")
+moc = 950
+skret = 21
+przyczepnosc_drift = 0.09
+tarcie = -0.75
+metadata/_custom_type_script = "uid://cmatil700xq4j"

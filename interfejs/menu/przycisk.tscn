@@ -1,0 +1,169 @@
+[gd_scene load_steps=15 format=3 uid="uid://c2fpu3s4tfbj2"]
+
+[ext_resource type="Script" uid="uid://wbuw3qtif6qq" path="res://interfejs/menu/przycisk.gd" id="1_062y5"]
+[ext_resource type="FontFile" uid="uid://b47akt0ehbi3u" path="res://assets/font/Fredoka-Medium.ttf" id="2_78kc8"]
+[ext_resource type="AudioStream" uid="uid://dljt0dqv5cvmq" path="res://assets/sound/immersivecontrol-button-click-sound-463065.mp3" id="3_75px0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_78kc8"]
+font = ExtResource("2_78kc8")
+font_size = 40
+font_color = Color(1, 0.75686276, 0.02745098, 1)
+outline_size = 51
+outline_color = Color(1, 0.75686276, 0.02745098, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_75px0"]
+font = ExtResource("2_78kc8")
+font_size = 40
+font_color = Color(0, 0.6901961, 1, 1)
+outline_size = 34
+outline_color = Color(0, 0.6901961, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_v453r"]
+font = ExtResource("2_78kc8")
+font_size = 40
+font_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+outline_size = 17
+outline_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_848wf"]
+line_spacing = 4.0
+font = ExtResource("2_78kc8")
+font_size = 40
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_848wf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ea7et"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gwby7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ji85h"]
+
+[sub_resource type="Animation" id="Animation_75px0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("label-niebieski:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [34]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("label-zolty:label_settings:outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [51]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("label-czerwony:label_settings:outline_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [17]
+}
+
+[sub_resource type="Animation" id="Animation_78kc8"]
+resource_name = "klik"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("label-niebieski:label_settings:outline_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [34, 24, 34]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("label-zolty:label_settings:outline_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [51, 41, 51]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("label-czerwony:label_settings:outline_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [17, 7, 17]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v453r"]
+_data = {
+&"RESET": SubResource("Animation_75px0"),
+&"klik": SubResource("Animation_78kc8")
+}
+
+[node name="Przycisk" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_062y5")
+
+[node name="label-zolty" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_78kc8")
+
+[node name="label-niebieski" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_75px0")
+
+[node name="label-czerwony" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_v453r")
+
+[node name="label-bialy" type="Label" parent="."]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_848wf")
+
+[node name="przycisk" type="Button" parent="."]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_848wf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ea7et")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_gwby7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ji85h")
+
+[node name="KlikAnimacja" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_v453r")
+}
+speed_scale = 2.0
+
+[node name="klik" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_75px0")
+bus = &"sfx"

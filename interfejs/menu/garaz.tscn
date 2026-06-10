@@ -1,0 +1,316 @@
+[gd_scene load_steps=16 format=3 uid="uid://cxpiwkreu8p85"]
+
+[ext_resource type="PackedScene" uid="uid://c2fpu3s4tfbj2" path="res://interfejs/menu/przycisk.tscn" id="1_sqrqk"]
+[ext_resource type="Script" uid="uid://dqklsld6sioto" path="res://interfejs/menu/garaz.gd" id="1_vu5vv"]
+[ext_resource type="FontFile" uid="uid://doq3t4qeffiip" path="res://assets/font/Fredoka-Bold.ttf" id="2_8rey2"]
+[ext_resource type="FontFile" uid="uid://b47akt0ehbi3u" path="res://assets/font/Fredoka-Medium.ttf" id="3_sw3sh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xficg"]
+font = ExtResource("2_8rey2")
+font_size = 52
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vu5vv"]
+bg_color = Color(1, 0.75686276, 0.02745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sw3sh"]
+bg_color = Color(0, 0.6901961, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rey2"]
+bg_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xficg"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_sw3sh"]
+font = ExtResource("3_sw3sh")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8rey2"]
+font = ExtResource("3_sw3sh")
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebe8x"]
+content_margin_top = 10.0
+bg_color = Color(0.51125896, 0.51125896, 0.5112588, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb12t"]
+bg_color = Color(0, 0.80855197, 0.3775484, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8871"]
+bg_color = Color(7.70092e-06, 0.5276688, 0.10085044, 1)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_65k3o"]
+font = ExtResource("2_8rey2")
+font_size = 100
+
+[node name="Garaż" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_vu5vv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.15686275, 0.13725491, 0.29803923, 1)
+
+[node name="Napis" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 319.0
+offset_bottom = 94.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+
+[node name="Label" type="Label" parent="Napis"]
+layout_mode = 2
+text = "GARAŻ"
+label_settings = SubResource("LabelSettings_xficg")
+
+[node name="PrzyciskiTOP" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.5
+offset_top = 80.0
+offset_right = 20.5
+offset_bottom = 139.0
+grow_horizontal = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="przyciski" type="MarginContainer" parent="PrzyciskiTOP"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PrzyciskiTOP/przyciski"]
+layout_mode = 2
+
+[node name="Lewo" parent="PrzyciskiTOP/przyciski/HBoxContainer" instance=ExtResource("1_sqrqk")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "<"
+
+[node name="Wybierz" parent="PrzyciskiTOP/przyciski/HBoxContainer" instance=ExtResource("1_sqrqk")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "WYBIERZ"
+
+[node name="Prawo" parent="PrzyciskiTOP/przyciski/HBoxContainer" instance=ExtResource("1_sqrqk")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = ">"
+
+[node name="kontenerKarty" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 350)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.0
+offset_top = -175.0
+offset_right = 140.00006
+offset_bottom = 175.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelŻ" type="Panel" parent="kontenerKarty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vu5vv")
+
+[node name="PanelN" type="Panel" parent="kontenerKarty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sw3sh")
+
+[node name="PanelC" type="Panel" parent="kontenerKarty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8rey2")
+
+[node name="PanelB" type="Panel" parent="kontenerKarty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xficg")
+
+[node name="karta" type="MarginContainer" parent="kontenerKarty"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="karta" type="VBoxContainer" parent="kontenerKarty/karta"]
+layout_mode = 2
+
+[node name="Nazwa" type="Label" parent="kontenerKarty/karta/karta"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_sw3sh")
+
+[node name="Zdjecie" type="TextureRect" parent="kontenerKarty/karta/karta"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+stretch_mode = 3
+
+[node name="LPB1" type="Label" parent="kontenerKarty/karta/karta"]
+layout_mode = 2
+text = "Moc silnika:"
+label_settings = SubResource("LabelSettings_8rey2")
+
+[node name="PasekMocy" type="ProgressBar" parent="kontenerKarty/karta/karta"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ebe8x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hb12t")
+min_value = 850.0
+max_value = 1200.0
+value = 850.0
+show_percentage = false
+
+[node name="LPB2" type="Label" parent="kontenerKarty/karta/karta"]
+layout_mode = 2
+text = "Skrętność:"
+label_settings = SubResource("LabelSettings_8rey2")
+
+[node name="PasekSkretu" type="ProgressBar" parent="kontenerKarty/karta/karta"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ebe8x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hb12t")
+min_value = 9.0
+max_value = 24.0
+step = 1.0
+value = 10.0
+show_percentage = false
+
+[node name="LPB3" type="Label" parent="kontenerKarty/karta/karta"]
+layout_mode = 2
+text = "Przyczepność:"
+label_settings = SubResource("LabelSettings_8rey2")
+
+[node name="PasekPrzyczepnosci" type="ProgressBar" parent="kontenerKarty/karta/karta"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ebe8x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hb12t")
+max_value = 0.1
+show_percentage = false
+
+[node name="ZnacznikWyboru" type="PanelContainer" parent="kontenerKarty"]
+unique_name_in_owner = true
+visible = false
+clip_contents = true
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 0
+offset_left = 246.0
+offset_top = 4.0
+offset_right = 386.0
+offset_bottom = 144.0
+rotation = 0.28218126
+scale = Vector2(0.2, 0.2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_a8871")
+
+[node name="label" type="Label" parent="kontenerKarty/ZnacznikWyboru"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "✓"
+label_settings = SubResource("LabelSettings_65k3o")
+
+[node name="Powrot" parent="." instance=ExtResource("1_sqrqk")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+offset_left = -45.5
+offset_top = -99.0
+offset_right = 45.5
+offset_bottom = -40.0
+grow_vertical = 0
+size_flags_vertical = 8
+tekst = "POWRÓT"

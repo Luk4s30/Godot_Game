@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://c04dfa15ggvvp"]
+
+[ext_resource type="Script" uid="uid://5wy2pvrrh37a" path="res://interfejs/gra/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="FontFile" uid="uid://b47akt0ehbi3u" path="res://assets/font/Fredoka-Medium.ttf" id="2_05uyy"]
+[ext_resource type="PackedScene" uid="uid://c2fpu3s4tfbj2" path="res://interfejs/menu/przycisk.tscn" id="3_p81d2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_05uyy"]
+bg_color = Color(0.29035345, 0.2903535, 0.29035333, 0.57254905)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_2nc7s"]
+font = ExtResource("2_05uyy")
+font_size = 50
+
+[node name="Pause Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hdmo1")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -185.0
+offset_top = -218.0
+offset_right = 185.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(350, 400)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_05uyy")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9192777, 0, 0.01467805, 1)
+theme_override_font_sizes/font_size = 75
+text = "PAUZA"
+label_settings = SubResource("LabelSettings_2nc7s")
+horizontal_alignment = 1
+
+[node name="Resume" parent="CenterContainer/VBoxContainer" instance=ExtResource("3_p81d2")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tekst = "WZNÓW"
+
+[node name="Restart" parent="CenterContainer/VBoxContainer" instance=ExtResource("3_p81d2")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+tekst = "RESET"
+
+[node name="Main menu" parent="CenterContainer/VBoxContainer" instance=ExtResource("3_p81d2")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+tekst = "MENU GŁÓWNE"

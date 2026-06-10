@@ -1,0 +1,258 @@
+[gd_scene load_steps=21 format=3 uid="uid://da831sps265bf"]
+
+[ext_resource type="Script" uid="uid://bvm3clcpw0eqx" path="res://interfejs/menu/mapy_wybór.gd" id="1_g7h6a"]
+[ext_resource type="Texture2D" uid="uid://b2c44echu7cro" path="res://mapy/mapy_png/mapa1.png" id="2_k1hjx"]
+[ext_resource type="Texture2D" uid="uid://brxhem78uxisw" path="res://mapy/mapy_png/mapa2.png" id="3_a17rj"]
+[ext_resource type="Texture2D" uid="uid://bki63h4wuwwnf" path="res://mapy/mapy_png/mapa3.png" id="4_6nu5b"]
+[ext_resource type="PackedScene" uid="uid://b1tmsweglbhv8" path="res://mapy/mapy_sceny/mapa_1W.tscn" id="5_d7icp"]
+[ext_resource type="PackedScene" uid="uid://cmaxhr7o5icw4" path="res://mapy/mapy_sceny/mapa2W.tscn" id="6_87p4j"]
+[ext_resource type="PackedScene" uid="uid://bmg6l8p13qivt" path="res://mapy/mapy_sceny/mapa3W.tscn" id="7_nc7fd"]
+[ext_resource type="PackedScene" uid="uid://dv25c7rnn2x7p" path="res://mapy/mapy_sceny/mapa1.tscn" id="8_2wpwq"]
+[ext_resource type="PackedScene" uid="uid://br8jt0wjorjgx" path="res://mapy/mapy_sceny/mapa2.tscn" id="9_tbk38"]
+[ext_resource type="PackedScene" uid="uid://dv17v4jgc5myy" path="res://mapy/mapy_sceny/mapa3.tscn" id="10_s5q3c"]
+[ext_resource type="FontFile" uid="uid://doq3t4qeffiip" path="res://assets/font/Fredoka-Bold.ttf" id="11_04hvs"]
+[ext_resource type="PackedScene" uid="uid://c2fpu3s4tfbj2" path="res://interfejs/menu/przycisk.tscn" id="12_kmde3"]
+[ext_resource type="FontFile" uid="uid://b47akt0ehbi3u" path="res://assets/font/Fredoka-Medium.ttf" id="13_a25t6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6j4n3"]
+font = ExtResource("11_04hvs")
+font_size = 51
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g1u0f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sk3uh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v1ka7"]
+font = ExtResource("13_a25t6")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_delx8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 0.75686276, 0.02745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 30.0
+expand_margin_top = 30.0
+expand_margin_right = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v1ka7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 100
+border_width_top = 100
+border_width_right = 100
+border_width_bottom = 100
+border_color = Color(0, 0.6901961, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 20.0
+expand_margin_top = 20.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bci1r"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.9372549, 0.3254902, 0.3137255, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="mapy" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g7h6a")
+map_images = Array[Texture2D]([ExtResource("2_k1hjx"), ExtResource("3_a17rj"), ExtResource("4_6nu5b")])
+race_scenes = Array[PackedScene]([ExtResource("5_d7icp"), ExtResource("6_87p4j"), ExtResource("7_nc7fd")])
+time_trial_scenes = Array[PackedScene]([ExtResource("8_2wpwq"), ExtResource("9_tbk38"), ExtResource("10_s5q3c")])
+active_color = Color(1, 1, 1, 1)
+inactive_color = Color(0.641934, 0.641934, 0.641934, 1)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -227.99998
+offset_top = 604.0
+offset_right = -228.0
+offset_bottom = 604.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.2234684
+color = Color(0.15686275, 0.13725491, 0.29803923, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 53
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Lewy Panel" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+text = "WYBIERZ TRYB:"
+label_settings = SubResource("LabelSettings_6j4n3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+
+[node name="wyścig" parent="MarginContainer/HBoxContainer/Lewy Panel/HBoxContainer" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "WYŚCIG"
+
+[node name="czasowka" parent="MarginContainer/HBoxContainer/Lewy Panel/HBoxContainer" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "CZASÓWKA"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+theme_override_constants/separation = 75
+theme_override_styles/separator = SubResource("StyleBoxEmpty_g1u0f")
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+text = "MAPY:"
+label_settings = SubResource("LabelSettings_6j4n3")
+
+[node name="mapy_but" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Tor" parent="MarginContainer/HBoxContainer/Lewy Panel/mapy_but" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "TOR"
+
+[node name="Las" parent="MarginContainer/HBoxContainer/Lewy Panel/mapy_but" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "LAS"
+
+[node name="Park" parent="MarginContainer/HBoxContainer/Lewy Panel/mapy_but" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "PARK"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+theme_override_constants/separation = 75
+theme_override_styles/separator = SubResource("StyleBoxEmpty_sk3uh")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/Lewy Panel"]
+layout_mode = 2
+
+[node name="powrot" parent="MarginContainer/HBoxContainer/Lewy Panel/HBoxContainer2" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+tekst = "POWRÓT"
+
+[node name="start" parent="MarginContainer/HBoxContainer/Lewy Panel/HBoxContainer2" instance=ExtResource("12_kmde3")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Prawy Panel" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_constants/separation = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/Prawy Panel"]
+layout_mode = 2
+
+[node name="nazwa" type="Label" parent="MarginContainer/HBoxContainer/Prawy Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_v1ka7")
+
+[node name="rekord" type="Label" parent="MarginContainer/HBoxContainer/Prawy Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Rekord:"
+label_settings = SubResource("LabelSettings_v1ka7")
+
+[node name="Panel2" type="Panel" parent="MarginContainer/HBoxContainer/Prawy Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_delx8")
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/Prawy Panel/Panel2"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v1ka7")
+
+[node name="zdj" type="TextureRect" parent="MarginContainer/HBoxContainer/Prawy Panel/Panel2/Panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HBoxContainer/Prawy Panel/Panel2/Panel/zdj"]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bci1r")
